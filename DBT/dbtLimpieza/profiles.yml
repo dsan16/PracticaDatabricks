@@ -1,0 +1,13 @@
+dbtLimpieza:
+  outputs:
+    SILVER:
+      account: lnwnuwk-uf09760
+      database: KAGGLE_DB
+      password: 16Cozar16hockey!
+      role: ACCOUNTADMIN
+      threads: 1
+      schema: SILVER
+      type: snowflake
+      user: dsan
+      warehouse: NEWS_WH
+  target: SILVER

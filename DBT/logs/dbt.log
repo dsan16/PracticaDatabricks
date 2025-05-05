@@ -1,0 +1,55 @@
+[0m13:01:13.866231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D581E3C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D5820B710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D58231190>]}
+
+
+============================== 13:01:13.875231 | ec0d001b-a54c-4597-99ba-069030e78268 ==============================
+[0m13:01:13.875231 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:01:13.877239 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\danis\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init dbtLimpieza', 'send_anonymous_usage_stats': 'True'}
+[0m13:01:13.923234 [debug] [MainThread]: Starter project path: C:\Users\danis\Documents\PracticaDataBricks\DBT\venv\Lib\site-packages\dbt\include\starter_project
+[0m13:01:14.044234 [info ] [MainThread]: 
+Your new dbt project "dbtLimpieza" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:01:14.046231 [info ] [MainThread]: Setting up your profile.
+[0m13:03:26.844677 [info ] [MainThread]: Profile dbtLimpieza written to C:\Users\danis\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:03:26.847681 [debug] [MainThread]: Command `dbt init` succeeded at 13:03:26.847681 after 133.14 seconds
+[0m13:03:26.848681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D5173BB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D58231250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D58232850>]}
+[0m13:03:26.850706 [debug] [MainThread]: Flushing usage events
+[0m13:03:27.277159 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:15:53.704072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7ABD50CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7ABD53A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7ABD2BED0>]}
+
+
+============================== 09:15:53.713390 | d40663d4-4de9-4c4a-a293-f01e587e59ef ==============================
+[0m09:15:53.713390 [info ] [MainThread]: Running with dbt=1.9.4
+[0m09:15:53.715391 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\danis\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init dbtLimpieza', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:15:53.769510 [info ] [MainThread]: A project called dbtLimpieza already exists here.
+[0m09:15:53.771529 [debug] [MainThread]: Command `dbt init` succeeded at 09:15:53.771529 after 0.20 seconds
+[0m09:15:53.772527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7A52ABB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7ABD53810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7ABD52850>]}
+[0m09:15:53.772527 [debug] [MainThread]: Flushing usage events
+[0m09:15:54.293871 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:16:11.206230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B3FFD5DF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B3FFD53D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B3FFD53910>]}
+
+
+============================== 09:16:11.213226 | 665e3191-f182-4f38-81d1-7b929212ce19 ==============================
+[0m09:16:11.213226 [info ] [MainThread]: Running with dbt=1.9.4
+[0m09:16:11.215232 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\danis\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:16:11.216233 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\danis\Documents\PracticaDataBricks\DBT\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:16:11.218231 [debug] [MainThread]: Command `dbt run` failed at 09:16:11.217227 after 0.12 seconds
+[0m09:16:11.218231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B3FFD53B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B3F929B950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B3F92E9210>]}
+[0m09:16:11.219226 [debug] [MainThread]: Flushing usage events
+[0m09:16:11.643852 [debug] [MainThread]: An error was encountered while trying to flush usage events
