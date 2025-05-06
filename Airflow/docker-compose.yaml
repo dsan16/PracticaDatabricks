@@ -65,7 +65,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - ${AIRFLOW_PROJ_DIR:-.}/data:/opt/airflow/data
-    - /c/Users\danis\Documents\PracticaDataBricks\DBT\dbtLimpieza:/opt/airflow/dbtLimpieza
+    - /c/Users/danis/Documents/PracticaDataBricks/DBT/dbtLimpieza:/opt/airflow/dbtLimpieza
   #user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on

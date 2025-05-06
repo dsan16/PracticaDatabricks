@@ -1,8 +1,7 @@
 {{ config(materialized = 'view') }}
 
 with raw as (
-  select *
-  from {{ source('kaggle_db', 'courses') }}
+  select * from {{ source('kaggle_db', 'courses') }}
 ),
 
 nomulti as (
@@ -16,8 +15,8 @@ nomulti as (
 
 cleaned as (
   select
-    upper(trim(code_module))         as code_module,
-    upper(trim(code_presentation))   as code_presentation,
+    upper(trim(code_module)) as code_module,
+    upper(trim(code_presentation)) as code_presentation,
     try_cast(module_presentation_length as integer) as presentation_length
   from nomulti
 ),
@@ -25,9 +24,9 @@ cleaned as (
 no_missing as (
   select *
   from cleaned
-  where code_module          is not null
-    and code_presentation    is not null
-    and presentation_length  is not null
+  where code_module is not null
+    and code_presentation is not null
+    and presentation_length is not null
 ),
 
 validated as (

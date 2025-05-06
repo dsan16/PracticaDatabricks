@@ -21,8 +21,8 @@ parsed as (
     code_presentation,
     id_assessment,
     assessment_type,
-    try_cast(date as integer)  as raw_date,
-    try_cast(weight as double) as weight
+    CAST(date as integer) as raw_date,
+    CAST(weight as double) as weight
   from nomulti
 ),
 
@@ -49,11 +49,11 @@ filled as (
 no_missing as (
   select *
   from filled
-  where code_module       is not null
+  where code_module is not null
     and code_presentation is not null
-    and id_assessment     is not null
-    and date_filled       is not null
-    and weight            is not null
+    and id_assessment is not null
+    and date_filled is not null
+    and weight is not null
 ),
 
 validated as (
@@ -65,7 +65,7 @@ validated as (
 filtered as (
   select *
   from validated
-  where weight > 0
+  where weight > 10
 )
 
 select * from filtered

@@ -3,6 +3,7 @@ import os
 import glob
 import requests
 import json
+import time
 
 cred_path = os.path.join(os.path.dirname(__file__), "credentials", "databricks.json")
 with open(cred_path, "r") as f:
@@ -40,13 +41,29 @@ def upload_csv(local_path: str, volume_path: str):
     resp.raise_for_status()
     print(f"Subido {filename} -> Volumes/{volume_path}/{filename}")
 
-def trigger_databricks_job(job_id: int):
+def trigger_databricks_job(job_id: int, poll_interval: int = 30):
     url = f"https://{HOST}/api/2.0/jobs/run-now"
     payload = {"job_id": job_id}
     resp = requests.post(url, headers=HEADERS_DIR, json=payload)
     resp.raise_for_status()
     run_id = resp.json().get("run_id")
     print(f"Workspace {job_id} disparado exitosamente (run_id={run_id})")
+
+    url_status = f"https://{HOST}/api/2.1/jobs/runs/get?run_id={run_id}"
+    while True:
+        time.sleep(poll_interval)
+        r = requests.get(url_status, headers=HEADERS_DIR)
+        r.raise_for_status()
+        state = r.json()["state"]
+        life = state["life_cycle_state"]
+        result = state.get("result_state")
+        print(f"Estado actual: {life}{', resultado=' + result if result else ''}")
+        if life == "TERMINATED":
+            if result == "SUCCESS":
+                print(f"Job {run_id} finalizó correctamente")
+                return
+            else:
+                raise RuntimeError(f"Job {run_id} falló con result_state={result}")
 
 def Upload_and_runJob():
     ensure_volume_dir(VOLUME)

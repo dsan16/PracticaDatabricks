@@ -1,7 +1,7 @@
 {{ config(materialized = 'view') }}
 
 with raw as (
-  select * from {{ source('kaggle_db', 'student_vle') }}
+  select * from {{ source('kaggle_db', 'studentvle') }}
 ),
 
 nomulti as (
@@ -17,21 +17,21 @@ nomulti as (
 
 cleaned as (
   select
-    upper(trim(code_module))         as code_module,
-    upper(trim(code_presentation))   as code_presentation,
-    cast(id_student  as integer)     as id_student,
-    cast(id_site     as integer)     as id_site,
-    cast(date        as integer)     as date,
-    cast(sum_click   as integer)     as sum_click
+    upper(trim(code_module)) as code_module,
+    upper(trim(code_presentation)) as code_presentation,
+    cast(id_student as integer) as id_student,
+    cast(id_site as integer) as id_site,
+    cast(date as integer) as date,
+    cast(sum_click as integer) as sum_click
   from nomulti
 ),
 
 no_missing as (
   select * from cleaned
-  where id_student    is not null
-    and id_site       is not null
-    and date          is not null
-    and sum_click     is not null
+  where id_student is not null
+    and id_site is not null
+    and date is not null
+    and sum_click is not null
 ),
 
 validated as (

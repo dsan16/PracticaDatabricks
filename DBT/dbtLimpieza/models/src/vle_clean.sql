@@ -17,25 +17,25 @@ nomulti as (
 
 cleaned as (
   select
-    cast(id_site               as integer)      as id_site,
-    upper(trim(code_module))                   as code_module,
-    upper(trim(code_presentation))             as code_presentation,
-    lower(trim(activity_type))                 as activity_type,
+    cast(id_site as integer) as id_site,
+    upper(trim(code_module)) as code_module,
+    upper(trim(code_presentation)) as code_presentation,
+    lower(trim(activity_type)) as activity_type,
     case when week_from is null then null
          else cast(week_from as integer)
-    end                                        as week_from,
-    case when week_to   is null then null
-         else cast(week_to   as integer)
-    end                                        as week_to
+    end as week_from,
+    case when week_to is null then null
+         else cast(week_to as integer)
+    end as week_to
   from nomulti
 ),
 
 no_missing as (
   select * from cleaned
-  where id_site           is not null
-    and code_module       is not null
+  where id_site is not null
+    and code_module is not null
     and code_presentation is not null
-    and activity_type     is not null
+    and activity_type is not null
 ),
 
 validated as (

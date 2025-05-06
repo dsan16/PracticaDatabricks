@@ -23,5 +23,3 @@ def download_kaggle_dataset():
         path=download_dir,
         unzip=True
     )
-
-download_kaggle_dataset()

@@ -7,8 +7,8 @@ sources:
     tables:
       - name: assessments 
       - name: courses 
-      - name: student_assessment
-      - name: student_info
-      - name: student_registration
-      - name: student_vle
+      - name: studentassessment
+      - name: studentinfo
+      - name: studentregistration
+      - name: studentvle
       - name: vle

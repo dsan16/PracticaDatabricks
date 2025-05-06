@@ -8,10 +8,10 @@ from PracticaDatabricks.databricks_connection import Upload_and_runJob
 
 
 with DAG(
-    dag_id="news_dag_v2",
+    dag_id="databricks_dag",
     start_date=pendulum.datetime(2025, 4, 1, tz="Europe/Madrid"),
     schedule_interval="@daily",
-    catchup=True,
+    catchup=False,
     max_active_runs=1,
     concurrency=1
 ) as dag:
@@ -32,7 +32,6 @@ with DAG(
         'cd /opt/airflow/dbtLimpieza && '
         'dbt run'
     )
-
 )
     
 task_extract >> task_load >> dbt_run
